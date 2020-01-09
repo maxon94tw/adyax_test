@@ -1,0 +1,29 @@
+moduletest.adyax:
+  path: '/adyax-test'
+  defaults:
+    _controller: '\Drupal\moduletest\Controller\AdyaxTest::content'
+    _title: 'Adyax Test'
+  requirements:
+    _permission: 'access content'
+
+
+moduletest.form:
+  path: '/adyax-test-form'
+  defaults:
+    _form: '\Drupal\moduletest\Form\AdyaxTestForm'
+    _title: 'Adyax Test Form'
+  requirements:
+    _permission: 'access content'
+
+
+moduletest.node:
+  path: '/adyax-test-1/{node}'
+  defaults:
+    _controller: '\Drupal\moduletest\Controller\AdyaxNode::getBody'
+    _title_callback: '\Drupal\moduletest\Controller\AdyaxNode::getTitle'
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      node:
+        type: entity:node

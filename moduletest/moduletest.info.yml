@@ -1,0 +1,5 @@
+name: ModuleTest
+description: My first custom module
+core: 8.x
+type: module
+package: ModuleTest
